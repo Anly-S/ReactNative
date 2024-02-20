@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   cameraIcon: {
     height: 50,
     width: 50,
-    paddingBottom: 20,
+    paddingBottom: 10,
   },
   sendIcon: {
     height: 40,
