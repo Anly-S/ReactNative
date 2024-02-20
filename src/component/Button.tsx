@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 const ButtonComponent = () => {
+  const [count, setCount] = useState(0);
+
+  const onPress = () => {
+    setCount(prevCount => prevCount + 1);
+    console.log('we are here' + count);
+  };
   return (
-    <View>
-      <TouchableOpacity style={styles.button}>
-        <Text>LOGIN</Text>
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity style={styles.button} onPress={onPress}>
+      <Text>LOGIN</Text>
+    </TouchableOpacity>
   );
 };
 

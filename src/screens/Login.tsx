@@ -11,13 +11,13 @@ const ViewBoxesWithColorAndText = () => {
         style={styles.input}
         onChangeText={onChangeText}
         value={text}
-        placeholder="email  "
+        placeholder="Email  "
       />
       <TextInput
         style={styles.input}
         onChangeText={onChangeText}
         value={text}
-        placeholder="password"
+        placeholder="Password"
       />
       <Text>Forgot password?</Text>
       <ButtonComponent />
