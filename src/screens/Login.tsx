@@ -3,20 +3,21 @@ import {View, Text, TextInput, StyleSheet} from 'react-native';
 import ButtonComponent from '../component/Button';
 
 const ViewBoxesWithColorAndText = () => {
-  const [text, onChangeText] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
 
   return (
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        onChangeText={onChangeText}
-        value={text}
-        placeholder="Email  "
+        onChangeText={setEmail}
+        value={email}
+        placeholder="Email"
       />
       <TextInput
         style={styles.input}
-        onChangeText={onChangeText}
-        value={text}
+        onChangeText={setPassword}
+        value={password}
         placeholder="Password"
       />
       <Text>Forgot password?</Text>

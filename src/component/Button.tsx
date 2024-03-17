@@ -1,11 +1,14 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 const ButtonComponent = () => {
   const [count, setCount] = useState(0);
+  const navigation = useNavigation();
 
   const onPress = () => {
     setCount(prevCount => prevCount + 1);
     console.log('we are here' + count);
+    navigation.navigate('InstaHome', {});
   };
   return (
     <TouchableOpacity style={styles.button} onPress={onPress}>
@@ -19,6 +22,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#DDDD',
     padding: 10,
+    marginTop: 10,
   },
 });
 

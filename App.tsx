@@ -1,19 +1,13 @@
 import React from 'react';
-import Login from '../InstaProject/src/screens/Login';
-import HeaderComponent from './src/component/Header';
-import Stories from './src/component/Stories';
-import Feeds from './src/component/Feeds';
-import {View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {HomeStackMavigation} from './src/navigation/AppNavigation';
 
 const App = () => {
   return (
-    <View>
-      <HeaderComponent />
-      <Stories />
-      <Feeds />
-    </View>
+    <NavigationContainer>
+      <HomeStackMavigation />
+    </NavigationContainer>
   );
-  // return <Login />;
 };
 
 export default App;
